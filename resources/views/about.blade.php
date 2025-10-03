@@ -1,5 +1,8 @@
 
-<body class="bg-blue-500">
-  <section class="bg-red-300 h-[100px] w-full"></section>
-  <h1 class="text">About Page {{ $nama }} </h1>
-</body>
+@extends('layouts.app')
+@section('title', 'home page')
+
+@section('content')
+<h1>About page</h1>
+
+@endsection
