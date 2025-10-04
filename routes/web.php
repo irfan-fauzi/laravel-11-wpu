@@ -3,15 +3,16 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home', ['header' => 'Home']);
+    return view('page.home', ['header' => 'Home']);
 });
 
 Route::get('/about', function () {
-    return view('about', ['header' => 'About']);
+    return view('page.about', ['header' => 'About']);
 });
 
 Route::get('/blog', function () {
-    return view('blog', ['header' => 'blog',
+
+    return view('page.blog.index', ['header' => 'blog', // direktori file => views/page/blog/index.blade.php
         'posts' => [
             [
                 'id' => '1',
@@ -113,9 +114,9 @@ Route::get('/blog/{id}', function ($id) {
         abort(404, 'Artikel tidak ditemukan');
     }
 
-    return view('blog', ['title' => $post['title'], 'post' => $post]);
+    return view('page.blog.detailblog', ['title' => $post['title'], 'header' => 'Fresh from the oven', 'post' => $post]);
 });
 
 Route::get('/content', function () {
-    return view('content', ['header' => 'contact']);
+    return view('page.content', ['header' => 'contact']);
 });
