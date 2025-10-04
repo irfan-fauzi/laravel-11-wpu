@@ -27,7 +27,7 @@
         </main>
 
     </div>
-    <footer class="h-[200px] flex items-center justify-center bg-gray-950">
+    <footer class="h-[200px] flex items-center justify-center bg-gray-950 mt-20">
       <p>© made by 💟  @irfanfauzi 2025</p>
     </footer>
 </body>

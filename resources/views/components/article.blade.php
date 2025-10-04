@@ -9,7 +9,7 @@
 
 
       <section class="mt-4">
-          <a href="/blog/{{ $article['id'] }}">
+          <a href="/blog/{{ $article['slug'] }}">
               <h1 class="text-2xl capitalize font-semibold">{{ $article['title'] }}</h1>
           </a>
           <p class="mt-2">{{ Str::limit($article['body'], 340) }}</p>
@@ -18,7 +18,7 @@
                   <a href="#" class="bg-gray-950 text-sm px-3 py-1 rounded-md text-gray-400">{{ $article['category'] }}</a>
                   <span class="text-sm text-gray-600">{{ $article['duration'] }} min read</span>
               </div>
-              <a href="/blog/{{ $article['id'] }}" class="underline">Continue read &raquo;</a>
+              <a href="/blog/{{ $article['slug'] }}" class="underline">Continue read &raquo;</a>
           </div>
       </section>
       <div class="border-b mt-4 border-gray-700">

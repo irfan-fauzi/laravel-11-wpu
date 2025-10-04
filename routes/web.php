@@ -16,6 +16,7 @@ Route::get('/blog', function () {
         'posts' => [
             [
                 'id' => '1',
+                'slug' => 'judul-1',
                 'author' => 'Irfan fauzi',
                 'profilImg' => 'img/user.jpg',
                 'title' => 'Your portfolio is stopping you from geting that job',
@@ -24,6 +25,7 @@ Route::get('/blog', function () {
                 'duration' => 10,
             ], [
                 'id' => '2',
+                'slug' => 'judul-2',
                 'author' => 'Aulia Rahman',
                 'profilImg' => 'img/user.jpg',
                 'title' => 'Why simplicity wins in product design',
@@ -33,6 +35,7 @@ Route::get('/blog', function () {
             ],
             [
                 'id' => '3',
+                'slug' => 'judul-3',
                 'author' => 'Nadia Putri',
                 'profilImg' => 'img/user.jpg',
                 'title' => '5 UX mistakes that make users leave your site',
@@ -42,6 +45,7 @@ Route::get('/blog', function () {
             ],
             [
                 'id' => '4',
+                'slug' => 'judul-4',
                 'author' => 'Rizky Saputra',
                 'profilImg' => 'img/user.jpg',
                 'title' => 'Building your design system from scratch',
@@ -51,6 +55,7 @@ Route::get('/blog', function () {
             ],
             [
                 'id' => '5',
+                'slug' => 'judul-5',
                 'author' => 'Dewi Lestari',
                 'profilImg' => 'img/user.jpg',
                 'title' => 'The psychology behind color choices in UI design',
@@ -60,11 +65,12 @@ Route::get('/blog', function () {
             ], ]]);
 });
 
-Route::get('/blog/{id}', function ($id) {
+Route::get('/blog/{slug}', function ($slug) {
     // Fungsi collect() di Laravel digunakan untuk mengubah array biasa menjadi Collection, yaitu objek khusus Laravel yang punya banyak method bantu untuk memanipulasi data dengan cara yang lebih elegan dan mudah dibaca.
     $posts = collect([
         [
             'id' => '1',
+            'slug' => 'judul-1',
             'author' => 'Irfan fauzi',
             'profilImg' => 'img/user.jpg',
             'cover' => 'https://images.pexels.com/photos/33923864/pexels-photo-33923864.jpeg',
@@ -74,6 +80,7 @@ Route::get('/blog/{id}', function ($id) {
             'duration' => 10,
         ], [
             'id' => '2',
+            'slug' => 'judul-2',
             'author' => 'Aulia Rahman',
             'profilImg' => 'img/user.jpg',
             'cover' => 'https://images.pexels.com/photos/33869350/pexels-photo-33869350.jpeg',
@@ -84,6 +91,7 @@ Route::get('/blog/{id}', function ($id) {
         ],
         [
             'id' => '3',
+            'slug' => 'judul-3',
             'author' => 'Nadia Putri',
             'profilImg' => 'img/user.jpg',
             'cover' => 'https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg',
@@ -94,6 +102,7 @@ Route::get('/blog/{id}', function ($id) {
         ],
         [
             'id' => '4',
+            'slug' => 'judul-4',
             'author' => 'Rizky Saputra',
             'profilImg' => 'img/user.jpg',
             'cover' => 'https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg',
@@ -104,6 +113,7 @@ Route::get('/blog/{id}', function ($id) {
         ],
         [
             'id' => '5',
+            'slug' => 'judul-5',
             'author' => 'Dewi Lestari',
             'profilImg' => 'img/user.jpg',
             'cover' => 'https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg',
@@ -113,8 +123,9 @@ Route::get('/blog/{id}', function ($id) {
             'duration' => 9,
         ],
     ]);
-    //  $posts->firstWhere('id', $id); “Cari elemen pertama di collection $posts yang punya key id dengan nilai sama seperti $id.” kalau kamu pakai firstWhere(), begitu Laravel menemukan satu item pertama yang cocok, proses pencariannya langsung berhenti (short-circuiting).
-    $post = $posts->firstWhere('id', $id);
+    //  $posts->firstWhere('id', $id); 
+    // 'slug' => '',“Cari elemen pertama di collection $posts yang punya key id dengan nilai sama seperti $id.” kalau kamu pakai firstWhere(), begitu Laravel menemukan satu item pertama yang cocok, proses pencariannya langsung berhenti (short-circuiting).
+    $post = $posts->firstWhere('slug', $slug);
     if (! $post) {
         abort(404, 'Artikel tidak ditemukan');
     }

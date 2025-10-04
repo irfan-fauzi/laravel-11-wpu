@@ -5,7 +5,7 @@
             <header>
                 <img src="{{ $post['cover'] }}" alt="ilustrasi {{ $post['title'] }}">
                 <h1 class="text-gray-300 text-4xl capitalize mt-5 font-semibold">{{ $post['title'] }}</h1>
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center mt-5 mb-10">
                     <div class="flex items-center  gap-5 mt-3">
                         <a href="#"
                             class="bg-blue-700 text-gray-300 text-sm px-3 py-1 rounded-md">{{ $post['category'] }}</a>
