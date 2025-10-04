@@ -9,15 +9,19 @@
 
 
       <section class="mt-4">
-          <a href="/blog/{{ $article['id'] }}"><h1 class="text-2xl capitalize font-semibold">{{ $article['title'] }}</h1></a>
-          <p class="mt-2">{{ Str::limit($article['body'], 200) }}</p>
+          <a href="/blog/{{ $article['id'] }}">
+              <h1 class="text-2xl capitalize font-semibold">{{ $article['title'] }}</h1>
+          </a>
+          <p class="mt-2">{{ Str::limit($article['body'], 340) }}</p>
           <div class="flex justify-between mt-5">
               <div class="flex items-center gap-5">
-                  <span class="bg-gray-950 text-sm px-3 py-1 rounded-md">{{ $article['category'] }}</span>
+                  <a href="#" class="bg-gray-950 text-sm px-3 py-1 rounded-md text-gray-400">{{ $article['category'] }}</a>
                   <span class="text-sm text-gray-600">{{ $article['duration'] }} min read</span>
               </div>
               <a href="/blog/{{ $article['id'] }}" class="underline">Continue read &raquo;</a>
           </div>
       </section>
-      <div class="border-b mt-4 border-gray-700"></div>
+      <div class="border-b mt-4 border-gray-700">
+        
+      </div>
   </article>

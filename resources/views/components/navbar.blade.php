@@ -1,4 +1,4 @@
- <nav class="bg-gray-800/50">
+ <nav class="dark:bg-gray-800/50">
      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
          <div class="flex h-16 items-center justify-between">
              <div class="flex items-center">
@@ -9,13 +9,13 @@
                  <div class="hidden md:block">
                      <div class="ml-10 flex items-baseline space-x-6">
                          <a href="/"
-                             class="{{ request()->is('/') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white' }}" aria-current="{{ request()->is('/') ? 'page' : false }}">Home</a>
+                             class="{{ request()->is('/') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium dark:text-gray-300 dark:hover:bg-white/5 dark:hover:text-white' }}" aria-current="{{ request()->is('/') ? 'page' : false }}">Home</a>
                          <a href="/about"
-                             class="{{ request()->is('about') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white' }}" aria-current="{{ request()->is('about') ? 'page' : false }}">About</a>
+                             class="{{ request()->is('about') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium dark:text-gray-300 hover:bg-white/5 dark:hover:text-white' }}" aria-current="{{ request()->is('about') ? 'page' : false }}">About</a>
                          <a href="/blog"
-                             class="{{ request()->is('blog') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white' }}" aria-current="{{ request()->is('blog') ? 'page' : false }}">Blog</a>
+                             class="{{ request()->is('blog') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium dark:text-gray-300 hover:bg-white/5 dark:hover:text-white' }}" aria-current="{{ request()->is('blog') ? 'page' : false }}">Blog</a>
                          <a href="/content"
-                             class="{{ request()->is('content') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white' }}" aria-current="{{ request()->is('content') ? 'page' : false }}">Content</a>
+                             class="{{ request()->is('content') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium dark:text-gray-300 hover:bg-white/5 dark:hover:text-white' }}" aria-current="{{ request()->is('content') ? 'page' : false }}">Content</a>
 
                      </div>
                  </div>

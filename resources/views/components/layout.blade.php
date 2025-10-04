@@ -27,6 +27,9 @@
         </main>
 
     </div>
+    <footer class="h-[200px] flex items-center justify-center bg-gray-950">
+      <p>© made by 💟  @irfanfauzi 2025</p>
+    </footer>
 </body>
 
 </html>

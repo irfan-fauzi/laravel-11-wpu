@@ -15,6 +15,9 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
                 inter: ["Inter var"],
             },
+            backgroundImage: {
+                "card-blue": "url('img/bg-blue.png')",
+            },
         },
     },
     plugins: [],
