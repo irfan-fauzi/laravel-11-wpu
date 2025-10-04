@@ -1,6 +1,15 @@
 <x-layout>
-  <x-slot:header>{{ $header }}</x-slot:header>
-  <h1>Home</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, exercitationem?</p>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea distinctio libero odit, sequi hic accusantium doloribus, voluptas esse exercitationem cumque aliquam! Itaque expedita voluptatum quaerat officia non facere eum rem.</p>
+    <x-slot:header>{{ $header }}</x-slot:header>
+    <h1 class="text-3xl font-bold text-gray-300 mt-5">Welcome to my Blog my friend... </h1>
+    <main class="flex lg:flex-row flex-col gap-3">
+        <div class="lg:w-3/4">
+            @foreach ($post as $article)
+                <x-article :article="$article"></x-article>
+            @endforeach
+        </div>
+        <section class="lg:w-1/4">
+
+        </section>
+    </main>
+
 </x-layout>

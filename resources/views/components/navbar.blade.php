@@ -1,4 +1,3 @@
- 
  <nav class="bg-gray-800/50">
      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
          <div class="flex h-16 items-center justify-between">
@@ -8,15 +7,15 @@
                          alt="Your Company" class="h-8 w-8" />
                  </div>
                  <div class="hidden md:block">
-                     <div class="ml-10 flex items-baseline space-x-4">
+                     <div class="ml-10 flex items-baseline space-x-6">
                          <a href="/"
-                             class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Home</a>
+                             class="{{ request()->is('/') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white' }}" aria-current="{{ request()->is('/') ? 'page' : false }}">Home</a>
                          <a href="/about"
-                             class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
+                             class="{{ request()->is('about') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white' }}" aria-current="{{ request()->is('about') ? 'page' : false }}">About</a>
                          <a href="/blog"
-                             class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Blog</a>
+                             class="{{ request()->is('blog') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white' }}" aria-current="{{ request()->is('blog') ? 'page' : false }}">Blog</a>
                          <a href="/content"
-                             class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Content</a>
+                             class="{{ request()->is('content') ? 'bg-gray-900 text-white px-2 py-1 rounded-lg text-sm font-medium' : 'text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white' }}" aria-current="{{ request()->is('content') ? 'page' : false }}">Content</a>
 
                      </div>
                  </div>
