@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
     <script src="//unpkg.com/alpinejs" defer></script>
-    <title>@yield('title', 'My App')</title>
+    <title>{{ $header }}</title>
 </head>
 
 <body class="h-full font-inter">
