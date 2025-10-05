@@ -1,4 +1,5 @@
 <x-layout>
+  <x-slot:title>{{ $title }}</x-slot:title>
   <x-slot:header>{{ $header }}</x-slot:header>
   <h1>Home</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, exercitationem?</p>

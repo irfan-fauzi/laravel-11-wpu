@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot:title>{{ $title }}</x-slot:title>
     <x-slot:header>{{ $header }}</x-slot:header>
     <main class="flex lg:flex-row flex-col gap-3">
         <article class="lg:w-3/4">
