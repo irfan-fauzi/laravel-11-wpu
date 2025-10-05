@@ -6,7 +6,7 @@ use Illuminate\Support\Arr;
 
 class Post
 {
-    public static function all()
+    public static function all(): array
     {
         return [
             [
@@ -67,7 +67,7 @@ class Post
 
     }
 
-    public static function find($slug)
+    public static function find($slug): array
     {
         // $postCollect = collect(static::all());
         // $post = $postCollect->firstWhere('slug', $slug);
@@ -75,6 +75,11 @@ class Post
         //     abort(404, 'Artikel tidak ditemukan');
         // }
         // return $post;
-        return Arr::first(static::all(), fn ($post) => $post['slug'] == $slug);
+        $post = Arr::first(static::all(), fn ($post) => $post['slug'] == $slug);
+        if (! $post) {
+            abort(404, 'Artikel tidak ditemukan');
+        }
+
+        return $post;
     }
 }
