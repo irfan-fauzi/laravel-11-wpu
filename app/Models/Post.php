@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Arr;
+
 class Post
 {
     public static function all()
@@ -65,13 +67,14 @@ class Post
 
     }
 
-    public static function getPostBySlug($slug)
+    public static function find($slug)
     {
-        $postCollect = collect(self::all());
-        $post = $postCollect->firstWhere('slug', $slug);
-        if (! $post) {
-            abort(404, 'Artikel tidak ditemukan');
-        }
-        return $post;
+        // $postCollect = collect(static::all());
+        // $post = $postCollect->firstWhere('slug', $slug);
+        // if (! $post) {
+        //     abort(404, 'Artikel tidak ditemukan');
+        // }
+        // return $post;
+        return Arr::first(static::all(), fn ($post) => $post['slug'] == $slug);
     }
 }

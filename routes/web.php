@@ -16,7 +16,8 @@ Route::get('/blog', function () {
 });
 
 Route::get('/blog/{slug}', function ($slug) {
-    $post = Post::getPostBySlug($slug);
+    $post = Post::find($slug);
+
     return view('page.blog.detailblog', ['title' => $post['title'], 'header' => 'Fresh from the oven', 'post' => $post]);
 });
 
